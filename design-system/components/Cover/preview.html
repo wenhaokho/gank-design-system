@@ -1,0 +1,62 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Gank</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .card { fill:var(--bg-card); rx:var(--radius-lg); }
+  .navy { fill:#414f6c; rx:var(--radius-lg); }
+  .brand { fill:var(--brand); }
+  .gold { fill:var(--gold); }
+  .green { fill:var(--success); }
+  .ink { fill:var(--ink); }
+  .pill { rx:var(--radius-pill); }
+  .words { position:absolute; left:var(--space-6); bottom:var(--space-6); max-width:440px; }
+  .name { margin:0; font-size:120px; line-height:.9; font-weight:700; letter-spacing:-.04em; color:var(--brand); }
+  .tag { margin:var(--space-3) 0 0 6px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks       bg-card panel 256×232 (space-6 inset, radius-lg) on the dark ground; a navy profile card 160×128 (radius-lg) overlapping its right edge, bled off the top-right; a brand-red strip 6×232 as the sidebar's current-page bar
+  arrangement  the dashboard itself: one big dark panel left, the fan-side navy card stacked over it, controls laid on the panel at the 8px scale
+  pattern      "pills" row — the UI is pill buttons and toggles on rounded panels: a brand toggle (44×24, radius-pill), a cta pill 128×44, a gold coin (disc 24), a green amount tick; chosen because Gank's shapes are pills and discs on 16px cards, not tiles
+  scales       space-2 8, space-3 12, space-4 16, space-6 32; radius-lg 16, radius-pill; control-height 44, toggle 44×24
+-->
+<rect class="card" x="32" y="40" width="256" height="232"/>
+<rect class="brand" x="32" y="40" width="6" height="232" rx="3"/>
+<rect class="ink pill" x="64" y="72" width="128" height="44" rx="22" opacity=".92"/>
+<rect class="brand pill" x="64" y="140" width="44" height="24" rx="12"/>
+<circle class="ink" cx="97" cy="152" r="9"/>
+<rect class="pill" x="124" y="140" width="44" height="24" rx="12" fill="#343435"/>
+<circle class="ink" cx="135" cy="152" r="9"/>
+<rect x="64" y="188" width="196" height="44" rx="10" fill="#2e2e2e"/>
+<rect class="brand" x="64" y="252" width="88" height="6" rx="3"/>
+<rect x="152" y="252" width="108" height="6" rx="3" fill="#2e2e2e"/>
+<circle class="ink" cx="152" cy="255" r="8"/>
+<rect class="navy" x="300" y="-24" width="160" height="152"/>
+<rect x="324" y="24" width="112" height="44" rx="22" fill="#90aeea"/>
+<rect x="324" y="84" width="72" height="8" rx="4" fill="#d9dde9"/>
+<circle class="gold" cx="420" cy="88" r="12"/>
+<rect x="300" y="152" width="160" height="112" rx="16" fill="#212d45"/>
+<rect class="green" x="324" y="176" width="56" height="8" rx="4"/>
+<rect x="324" y="200" width="112" height="8" rx="4" fill="#9aa5bd"/>
+<rect x="324" y="224" width="80" height="8" rx="4" fill="#9aa5bd"/>
+</svg>
+</div>
+<div class="words">
+  <p class="name">gank</p>
+  <p class="tag">Creator dashboard and public profile, documented from ganknow.com as it ships.</p>
+</div>
+</div>
+</body>
+</html>
